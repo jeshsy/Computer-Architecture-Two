@@ -1,0 +1,52 @@
+1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB of data?
+
+Depends.
+So the things this relies on are the seek time, the data transfer rate, which track the data is stored on, how many tracks there are, rotational latency, and transfer time, access time, and a ton of other things as well.
+
+The seek time is the average of all possible seek times. This is approximated as the time to seek over 1/3 of the number of tracks.
+
+The data transfer rate is used to measure how fast data is transferred from one location to the other. Can be measured in bits per second.
+
+Rotational Latency is the delay that you have to wait for the disk bring the disk sector to the read-write head.
+
+Access time is the measure of time that it takes before the drive can do things with the data. 
+
+
+
+2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
+
+TCP/IP packet is a way that you communicate between devices online. It's basically the rules.
+
+The header is 20 bytes and is made up of
+source port number
+destination port number
+sequence number
+acknowlegment number
+data offset
+reserved 000 bits
+control bits
+window size
+checksum
+urgent pointer
+options
+padding
+
+The data that follows the header is divided into portions. It is the payload.
+
+
+
+3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
+
+IP handles the delivery of the data and TCP makes sure the packets were all received, and sent in the correct order. If packets are not all there, TCP redoes the transfer. A checksum comparison is verified. 
+
+
+
+4. What is the difference between TCP and IP?
+
+IP makes sure that the packets are going to the right place and TCP makes sure that all of the data gets sent and received
+
+
+
+5. Why is 3d performance so much higher with a graphics card than without? Modern CPUs are extremely fast, what is limiting their performance?
+
+I believe a graphics card is what makes you process graphics faster and better. The entire graphics card is used to process the 3d stuff. It is dedicated to graphics, whereas the CPU has to deal with everything else the computer needs to be doing. 
